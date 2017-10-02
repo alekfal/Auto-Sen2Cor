@@ -16,7 +16,7 @@ $ tar -xvzf sen2cor-2.3.1.tar.gz && cd sen2cor-2.3.1
 $ which python (Command should return:/home/username/anaconda2/bin/python; if not, try to change pythonpath)
 $ python setup.py install
 
-Installation succesful!
+Installation successful!
 
 4.Setting up Sen2Cor environmental variables:
 $ export export SEN2COR_HOME=/home/username/sen2cor
