@@ -1,4 +1,3 @@
-# Python Script for PA-Project (Automatic Atmospheric Correction for S2 Data)
 
 """
 This Software is created for the automatic atmospheric correction of Sentinel 2 Data using Sen2Cor algorithm given freely by E.S.A. This script
