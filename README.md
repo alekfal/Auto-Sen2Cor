@@ -8,19 +8,26 @@ Sen2Cor 2.3.1 installation on Linux:
 
 2.3.Anaconda 4.2.0 installation:
 $ wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
+
 $ bash Anaconda2-4.2.0-Linux-x86_64.sh
 
 3.Sen2Cor 2.3.1 installation:
 $ wget http://step.esa.int/thirdparties/sen2cor/2.3.1/sen2cor-2.3.1.tar.gz
+
 $ tar -xvzf sen2cor-2.3.1.tar.gz && cd sen2cor-2.3.1
+
 $ which python (Command should return:/home/username/anaconda2/bin/python; if not, try to change pythonpath)
+
 $ python setup.py install
 
 Installation successful!
 
 4.Setting up Sen2Cor environmental variables:
+
 $ export export SEN2COR_HOME=/home/username/sen2cor
+
 $ export SEN2COR_BIN=/home/username/anaconda2/lib/python2.7/site-packages/sen2cor-2.3.1-py2.7.egg/sen2cor
+
 $ export GDAL_DATA=/home/username/anaconda2/lib/python2.7/site-packages/sen2cor-2.3.1-py2.7.egg/sen2cor/cfg/gdal_data
 
 Try:
