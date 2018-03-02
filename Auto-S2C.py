@@ -22,21 +22,18 @@ import time
 cwd=os.getcwd()
 print 'Current Working Directory:',cwd
 username=os.system("whoami")
-dir=[]
+os.system("export SEN2COR_HOME=/home/{}/sen2cor".format(username))
+os.system("export SEN2COR_BIN=/home/{}/anaconda2/lib/python2.7/site-packages/sen2cor-2.3.1-py2.7.egg/sen2cor".format(username))
+os.system("export GDAL_DATA=/home/{}/anaconda2/lib/python2.7/site-packages/sen2cor-2.3.1-py2.7.egg/sen2cor/cfg/gdal_data".format(username)
 im=0
 starttime=time.time()
 for (dirpath, dirnames, filenames) in walk(cwd):
-	dir.extend(dirnames)
-for dir in dir:
-	if fnmatch.fnmatch(dir, '*.SAFE'):
-		im=im+1
-		print "Sentinel 2 Data found:",dir
-		abspath=os.getcwd()
-		cmd=str("L2A_Process "+str(abspath)+"/"+str(dir)) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
+	for file in os.listdir(dirpath):
+		if fnmatch.fnmatch(str(file), '*.SAFE'):
+			im=im+1
+			print "Sentinel 2 Data found:",dir
+		cmd=str("L2A_Process "+str(dirpath)+"/"+str(file)) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
 		print "Running...", cmd
-		os.system("export SEN2COR_HOME=/home/{}/sen2cor".format(username))
-		os.system("export SEN2COR_BIN=/home/{}/anaconda2/lib/python2.7/site-packages/sen2cor-2.3.1-py2.7.egg/sen2cor".format(username))
-		os.system("export GDAL_DATA=/home/{}/anaconda2/lib/python2.7/site-packages/sen2cor-2.3.1-py2.7.egg/sen2cor/cfg/gdal_data".format(username))
 		os.system(cmd)
 elapsedtime=time.time()-starttime
 mins, secs = divmod(elapsedtime, 60)
