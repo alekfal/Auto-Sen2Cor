@@ -32,9 +32,9 @@ for (dirpath, dirnames, filenames) in walk(cwd):
 		if fnmatch.fnmatch(str(file), '*.SAFE'):
 			im=im+1
 			print "Sentinel 2 Data found:",dir
-		cmd=str("L2A_Process "+str(dirpath)+"/"+str(file)) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
-		print "Running...", cmd
-		os.system(cmd)
+			cmd=str("L2A_Process "+str(dirpath)+"/"+str(file)) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
+			print "Running...", cmd
+			os.system(cmd)
 elapsedtime=time.time()-starttime
 mins, secs = divmod(elapsedtime, 60)
 hours, mins = divmod(mins, 60)
