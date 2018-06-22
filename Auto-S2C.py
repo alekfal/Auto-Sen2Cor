@@ -24,8 +24,14 @@ for (dirpath, dirnames, filenames) in walk(cwd):
 	for file in os.listdir(dirpath):
 		if fnmatch.fnmatch(str(file), '*.SAFE'):
 			im=im+1
-			print "Sentinel 2 Data found:",dir
-			cmd='/home/{}/Sen2Cor-02.05.05-Linux64/bin/L2A_Process {}/{}'.format(str(username),str(dirpath),str(file)) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
+			print "Sentinel 2 Data found:", str(file)
+			"""
+			#On Windows x64. NOT TESTED!
+			sentinelfile=os.path.join(dirpath,str(file))
+			cmd='C:\Users\{}\AppData\Local\Sen2Cor-02.05.05-win64\L2A_Process.bat {}'.format(str(username),sentinelfile)
+			"""
+			sentinelfile=os.path.join(dirpath,str(file))
+			cmd='/home/{}/Sen2Cor-02.05.05-Linux64/bin/L2A_Process {}'.format(str(username),sentinelfile) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
 			print "Running...", cmd
 			os.system(cmd)
 elapsedtime=time.time()-starttime
