@@ -17,7 +17,6 @@ import getpass
 cwd=os.getcwd()
 print 'Current Working Directory:',cwd
 username = getpass.getuser()
-print username
 im=0
 starttime=time.time()
 for (dirpath, dirnames, filenames) in walk(cwd):
