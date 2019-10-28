@@ -1,19 +1,19 @@
 # Auto-Sen2Cor
 This Software is created for the automatic atmospheric correction of Sentinel 2 Data using Sen2Cor algorithm given freely by E.S.A. 
 
-###Sen2Cor 02.08.00 installation on Linux:
+### Sen2Cor 02.08.00 installation on Linux:
 
 1.Open terminal (Ctrl+Alt+T)
 
 2.Sen2Cor 02.08.08 installation:
-####$ wget http://step.esa.int/thirdparties/sen2cor/2.8.0/Sen2Cor-02.08.00-Linux64.run
+#### $ wget http://step.esa.int/thirdparties/sen2cor/2.8.0/Sen2Cor-02.08.00-Linux64.run
 
-####$ sh Sen2Cor-02.08.08-Linux64.run
+#### $ sh Sen2Cor-02.08.08-Linux64.run
 
 Installation successful!
 
-###Try:
-####$ /home/USERNAME/Sen2Cor-02.08.08-Linux64/bin/L2A_Process --help
+### Try:
+#### $ /home/USERNAME/Sen2Cor-02.08.08-Linux64/bin/L2A_Process --help
 
 usage: L2A_Process.py [-h] [--mode MODE] [--resolution {10,20,60}]
                       [--datastrip DATASTRIP] [--tile TILE]
@@ -71,8 +71,8 @@ optional arguments:
                         Select the atmospheric correction GIPP
   --GIP_L2A_PB GIP_L2A_PB
                         Select the processing baseline GIPP
-###Call script:
+### Call script:
 
-####$python3 Auto-S2C.py
+#### $python3 Auto-S2C.py
 
 
