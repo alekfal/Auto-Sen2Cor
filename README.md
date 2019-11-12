@@ -77,7 +77,6 @@ optional arguments:
                         Select the atmospheric correction GIPP
   --GIP_L2A_PB GIP_L2A_PB
                         Select the processing baseline GIPP
-
 ```
 
 ### Call script:
@@ -86,7 +85,6 @@ Help:
 
 ```
 $python3 Auto-S2C.py -h
-
 ```
 
 ------------------------------------------
@@ -95,7 +93,6 @@ Resolution option: all
 
 ```
 $python3 Auto-S2C.py
-
 ```
 ------------------------------------------
 
@@ -103,7 +100,6 @@ Resolution option: 10 meters
 
 ```
 $python3 Auto-S2C.py -r 10
-
 ```
 
 ------------------------------------------
@@ -112,7 +108,6 @@ Resolution option: 20 meters
 
 ```
 $python3 Auto-S2C.py -r 20
-
 ```
 
 ------------------------------------------
@@ -120,8 +115,5 @@ $python3 Auto-S2C.py -r 20
 Resolution option: 60 meters
 
 ```
-
 $python3 Auto-S2C.py -r 60
-
 ```
-
