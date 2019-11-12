@@ -6,14 +6,20 @@ This Software is created for the automatic atmospheric correction of Sentinel 2 
 1.Open terminal (Ctrl+Alt+T)
 
 2.Sen2Cor 02.08.08 installation:
-#### $ wget http://step.esa.int/thirdparties/sen2cor/2.8.0/Sen2Cor-02.08.00-Linux64.run
+
+```
+$ wget http://step.esa.int/thirdparties/sen2cor/2.8.0/Sen2Cor-02.08.00-Linux64.run
+
+```
 
 #### $ sh Sen2Cor-02.08.08-Linux64.run
 
 Installation successful!
 
 ### Try:
-#### $ /home/USERNAME/Sen2Cor-02.08.08-Linux64/bin/L2A_Process --help
+
+```
+$ /home/USERNAME/Sen2Cor-02.08.08-Linux64/bin/L2A_Process --help
 
 usage: L2A_Process.py [-h] [--mode MODE] [--resolution {10,20,60}]
                       [--datastrip DATASTRIP] [--tile TILE]
@@ -72,22 +78,50 @@ optional arguments:
   --GIP_L2A_PB GIP_L2A_PB
                         Select the processing baseline GIPP
 
+```
+
 ### Call script:
 
 Help:
-#### $python3 Auto-S2C.py -h
+
+```
+$python3 Auto-S2C.py -h
+
+```
+
 ------------------------------------------
+
 Resolution option: all
-#### $python3 Auto-S2C.py
+
+```
+$python3 Auto-S2C.py
+
+```
 ------------------------------------------
+
 Resolution option: 10 meters
-#### $python3 Auto-S2C.py -r 10
+
+```
+$python3 Auto-S2C.py -r 10
+
+```
+
 ------------------------------------------
+
 Resolution option: 20 meters
-#### $python3 Auto-S2C.py -r 20
+
+```
+$python3 Auto-S2C.py -r 20
+
+```
+
 ------------------------------------------
+
 Resolution option: 60 meters
-#### $python3 Auto-S2C.py -r 60
 
+```
 
+$python3 Auto-S2C.py -r 60
+
+```
 
