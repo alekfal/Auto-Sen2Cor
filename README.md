@@ -117,3 +117,7 @@ Resolution option: 60 meters
 ```
 $python3 Auto-S2C.py -r 60
 ```
+
+### Notes:
+
+Note 1: In order for the script to work make sure that paths to Sen2Cor (Linux: lines 81 & 87, Window: lines 65 & 71) are correct.
