@@ -7,19 +7,19 @@ This Software is created for the automatic atmospheric correction of Sentinel 2 
 
 2.Sen2Cor 02.08.08 installation:
 
-```
+```bash
 $wget http://step.esa.int/thirdparties/sen2cor/2.8.0/Sen2Cor-02.08.00-Linux64.run
 ```
 
-```
-$sh Sen2Cor-02.08.08-Linux64.run
+```bash
+sh Sen2Cor-02.08.08-Linux64.run
 ```
 Installation successful!
 
 ### Try:
 
-```
-$/home/USERNAME/Sen2Cor-02.08.08-Linux64/bin/L2A_Process --help
+```bash
+/home/USERNAME/Sen2Cor-02.08.08-Linux64/bin/L2A_Process --help
 
 usage: L2A_Process.py [-h] [--mode MODE] [--resolution {10,20,60}]
                       [--datastrip DATASTRIP] [--tile TILE]
@@ -83,23 +83,23 @@ optional arguments:
 
 Help:
 
-```
-$python3 Auto-S2C.py -h
+```bash
+python3 Auto-S2C.py -h
 ```
 
 ------------------------------------------
 
 Resolution option: all
 
-```
-$python3 Auto-S2C.py
+```bash
+python3 Auto-S2C.py
 ```
 ------------------------------------------
 
 Resolution option: 10 meters
 
-```
-$python3 Auto-S2C.py -r 10
+```bash
+python3 Auto-S2C.py -r 10
 ```
 
 ------------------------------------------
