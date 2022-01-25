@@ -8,11 +8,11 @@ This Software is created for the automatic atmospheric correction of Sentinel 2 
 2.Sen2Cor 02.08.08 installation:
 
 ```
-$wget http://step.esa.int/thirdparties/sen2cor/2.8.0/Sen2Cor-02.08.00-Linux64.run
+$wget http://step.esa.int/thirdparties/sen2cor/2.9.0/Sen2Cor-02.09.00-Linux64.run
 ```
 
 ```
-$sh Sen2Cor-02.08.08-Linux64.run
+$sh Sen2Cor-02.09.00-Linux64.run
 ```
 Installation successful!
 

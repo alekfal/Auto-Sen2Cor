@@ -3,7 +3,7 @@ This Software is created for the automatic atmospheric correction of Sentinel 2 
 Created by		: Falagas Alexandros, S.R.S.E - N.T.U.A, 16/06/2017
 E-mail			: alek.falagas@gmail.com
 Latest update	: 31/10/2019
-Version			: Version 0.0.6 | Sen2Cor version 02.08.00
+Version			: Version 0.0.7 | Sen2Cor version 02.09.00
 
 """
 
@@ -17,6 +17,7 @@ import getpass
 from optparse import OptionParser
 
 if __name__ == "__main__":
+
 
 	# Parsing argument resolution. Output resolution must be either 10, 20 ,60. Default option is all.
 	parser = OptionParser()
@@ -62,13 +63,13 @@ if __name__ == "__main__":
 					# Resolution: all
 					if resolution is None:
 						# Run Sen2Cor
-						cmd = 'C:\\Users\\{}\\AppData\\Local\\Sen2Cor-02.08.00-win64\\L2A_Process.bat {}'.format(username,sentinelfile)
+						cmd = 'C:\\Users\\{}\\AppData\\Local\\Sen2Cor-02.09.00-win64\\L2A_Process.bat {}'.format(username,sentinelfile)
 						print ("Running...", cmd)
 						os.system(cmd)
 					# In other case resolution must be either 10 or 20 or 60 meters.
 					else:
 						# Run Sen2Cor
-						cmd = 'C:\\Users\\{}\\AppData\\Local\\Sen2Cor-02.08.00-win64\\L2A_Process.bat {} --resolution {}'.format(username,sentinelfile, resolution)
+						cmd = 'C:\\Users\\{}\\AppData\\Local\\Sen2Cor-02.09.00-win64\\L2A_Process.bat {} --resolution {}'.format(username,sentinelfile, resolution)
 						print ("Running...", cmd)
 						os.system(cmd)
 				# Linux Tested
@@ -78,13 +79,13 @@ if __name__ == "__main__":
 					# Resolution: all
 					if resolution is None:
 						# Run Sen2Cor
-						cmd = '/home/{}/Sen2Cor-02.08.00-Linux64/bin/L2A_Process {}'.format(username,sentinelfile) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
+						cmd = '/home/{}/Sen2Cor-02.09.00-Linux64/bin/L2A_Process {}'.format(username,sentinelfile) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
 						print ("Running...", cmd)
 						os.system(cmd)
 					# In other case resolution must be either 10 or 20 or 60 meters.
 					else:
 						# Run Sen2Cor
-						cmd = '/home/{}/Sen2Cor-02.08.00-Linux64/bin/L2A_Process {} --resolution {}'.format(username,sentinelfile, resolution) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
+						cmd = '/home/{}/Sen2Cor-02.09.00-Linux64/bin/L2A_Process {} --resolution {}'.format(username,sentinelfile, resolution) # You can set Sen2Cor resolution by adding after L2A_Process --resolution=60 for 60m or 20 for 20m or 10 for 10m. By default resolution is all.
 						print ("Running...", cmd)
 						os.system(cmd)
 	# Calculating total time elapsed in hours, minutes and seconds.			
