@@ -1,7 +1,7 @@
 # Auto-Sen2Cor
 This Software is created for the automatic atmospheric correction of Sentinel 2 Data using Sen2Cor algorithm given freely by E.S.A.
 
-## Sen2Cor 02.09.00 installation on Linux:
+## Sen2Cor 02.09.00 installation on Linux
 
 1.Open terminal (Ctrl+Alt+T)
 
@@ -133,6 +133,6 @@ Run with resolution option (-r): 60 meters
 python3 Auto-S2C.py -r 60
 ```
 
-## Notes:
+## Notes
 
 * In order for the script to work make sure that paths to Sen2Cor binaries (Linux: lines 81 & 87, Window: lines 65 & 71) are correct.
