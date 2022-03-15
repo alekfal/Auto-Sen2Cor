@@ -1,10 +1,8 @@
 """
 This Software is created for the automatic atmospheric correction of Sentinel 2 Data using Sen2Cor algorithm given freely by E.S.A. For more details read 'Read Me.txt' given with this software.
-Created by		: Falagas Alexandros, S.R.S.E - N.T.U.A, 16/06/2017
+Created by		: Falagas Alexandros, S.R.S.E - N.T.U.A,
 E-mail			: alek.falagas@gmail.com
-Latest update	: 31/10/2019
-Version			: Version 0.0.7 | Sen2Cor version 02.09.00
-
+Version			: Sen2Cor version 02.09.00
 """
 
 import os
