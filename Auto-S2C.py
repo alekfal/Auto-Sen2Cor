@@ -22,6 +22,7 @@ if __name__ == "__main__":
 	# Parsing argument resolution. Output resolution must be either 10, 20 ,60. Default option is all.
 	parser = OptionParser()
 	parser.add_option("-r", "--resolution", dest = "resolution", help = "Output resolution of Sen2Cor.", default = None, type = "int")
+	parser.add_option("-p", "--path", dest = "path", help = "Search path.", default = os.getcwd(), type = "str")
 	(options, args) = parser.parse_args()
 	if options.resolution == None:
 		print ('Output resolution is all.')
@@ -40,7 +41,7 @@ if __name__ == "__main__":
 		raise ValueError("Output resolution must be either 10, 20 ,60. Default option is all.")
 
 	# Getting working directory
-	cwd=os.getcwd()
+	cwd = options.path
 	print ('Current Working Directory: {}'.format(cwd))
 	# Getting username
 	username = getpass.getuser()
@@ -53,7 +54,7 @@ if __name__ == "__main__":
 	for (dirpath, dirnames, filenames) in walk(cwd):
 		for file in os.listdir(dirpath):
 			# Find data
-			if fnmatch.fnmatch(str(file), '*.SAFE'):
+			if fnmatch.fnmatch(str(file), '*L1C*.SAFE'):
 				images = images + 1
 				print ("Raw data found (*.SAFE files): {}".format(str(file)))
 				# Windows NOT TESTED
