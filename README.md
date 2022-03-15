@@ -1,7 +1,7 @@
 # Auto-Sen2Cor
 This Software is created for the automatic atmospheric correction of Sentinel 2 Data using Sen2Cor algorithm given freely by E.S.A.
 
-### Sen2Cor 02.09.00 installation on Linux:
+## Sen2Cor 02.09.00 installation on Linux:
 
 1.Open terminal (Ctrl+Alt+T)
 
@@ -17,11 +17,15 @@ $sh Sen2Cor-02.09.00-Linux64.run
 
 Installation successful!
 
-### Try:
+then try
 
 ```bash
-/home/USERNAME/Sen2Cor-02.09.00-Linux64/bin/L2A_Process --help
+/home/$USER/Sen2Cor-02.09.00-Linux64/bin/L2A_Process --help
+```
 
+and the software should output
+
+```bash
 usage: L2A_Process.py [-h] [--mode MODE] [--resolution {10,20,60}]
                       [--datastrip DATASTRIP] [--tile TILE]
                       [--output_dir OUTPUT_DIR] [--work_dir WORK_DIR]
@@ -35,8 +39,8 @@ usage: L2A_Process.py [-h] [--mode MODE] [--resolution {10,20,60}]
                       [--GIP_L2A_AC GIP_L2A_AC] [--GIP_L2A_PB GIP_L2A_PB]
                       input_dir
 
-Sentinel-2 Level 2A Processor (Sen2Cor). Version: 2.8.0, created: 2019.02.20,
-supporting Level-1C product version 14.2 - 14.5.
+Sen2Cor 2.9.0, created: 2020.11.30, supporting Level-1C product version 14.2 -
+14.6.
 
 positional arguments:
   input_dir             Directory of Level-1C input
@@ -80,9 +84,9 @@ optional arguments:
                         Select the processing baseline GIPP
 ```
 
-### Call script:
+## Running the script
 
-Help:
+To get help run:
 
 ```bash
 python3 Auto-S2C.py -h
@@ -90,14 +94,24 @@ python3 Auto-S2C.py -h
 
 ------------------------------------------
 
-Resolution option: all
+Provide a search path with -p option as in bellow
+
+
+```bash
+python3 Auto-S2C.py -p /home/$USER/
+```
+
+------------------------------------------
+
+Run with resolution option (-r): all
 
 ```bash
 python3 Auto-S2C.py
 ```
+
 ------------------------------------------
 
-Resolution option: 10 meters
+Run with resolution option (-r): 10 meters
 
 ```bash
 python3 Auto-S2C.py -r 10
@@ -105,7 +119,7 @@ python3 Auto-S2C.py -r 10
 
 ------------------------------------------
 
-Resolution option: 20 meters
+Run with resolution option (-r): 20 meters
 
 ```bash
 python3 Auto-S2C.py -r 20
@@ -113,12 +127,12 @@ python3 Auto-S2C.py -r 20
 
 ------------------------------------------
 
-Resolution option: 60 meters
+Run with resolution option (-r): 60 meters
 
 ```bash
 python3 Auto-S2C.py -r 60
 ```
 
-### Notes:
+## Notes:
 
-Note 1: In order for the script to work make sure that paths to Sen2Cor (Linux: lines 81 & 87, Window: lines 65 & 71) are correct.
+* In order for the script to work make sure that paths to Sen2Cor binaries (Linux: lines 81 & 87, Window: lines 65 & 71) are correct.
